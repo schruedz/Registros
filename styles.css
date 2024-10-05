@@ -1,0 +1,232 @@
+/* Estilos generales */
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0; /* Cambiado a 0 para evitar el padding automático */
+    width: 100%;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    display: flex;
+    flex-direction: column; /* Añadido para permitir que el footer se mantenga en la parte inferior */
+}
+
+/* Estilos del header */
+header {
+    background-color: #0044ff; /* Fondo del header */
+}
+
+/* Estilos del navbar */
+header nav {
+    display: flex;
+    justify-content: center; /* Centrar los elementos */
+    padding: 10px;
+}
+
+/* Lista de navegación */
+header nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex; /* Usar flexbox para los elementos de la lista */
+}
+
+/* Elementos de la lista */
+header nav ul li {
+    margin: 0 15px; /* Espaciado horizontal */
+}
+
+/* Enlaces del navbar */
+header nav ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 8px 12px; /* Agregado padding para hacer más clicables los enlaces */
+    transition: background-color 0.3s; /* Transición suave */
+}
+
+/* Efecto hover en los enlaces */
+header nav ul li a:hover {
+    background-color: rgba(255, 255, 255, 0.2); /* Color de fondo en hover */
+    border-radius: 4px; /* Bordes redondeados en hover */
+}
+
+/* Estilos para pantallas pequeñas */
+@media (max-width: 768px) {
+    header nav ul {
+        flex-direction: column; /* Cambiado a columna para centrar en móviles */
+        align-items: center; /* Centrar los elementos */
+    }
+
+    header nav ul li {
+        margin: 10px 0; /* Espaciado vertical para móviles */
+    }
+}
+
+
+/* Contenedor principal para el contenido */
+#content {
+    flex: 1; /* Asegura que el contenido ocupe el espacio disponible */
+    display: flex;
+    justify-content: center; /* Centra el contenido si es necesario */
+    align-items: center; /* Centra verticalmente si es necesario */
+}
+
+footer {
+    background-color: #0044ff; 
+    color: white; 
+    text-align: center; 
+    padding: 10px; 
+    clear: both; 
+    margin-top: auto; /* Esto empuja el footer hacia el fondo */
+}
+
+/* Estilos para el formulario */
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 400px; 
+    margin: 0 auto; 
+    padding: 20px;
+    background-color: #f9f9f9; 
+    border-radius: 8px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+}
+
+/* Cada grupo de elementos del formulario */
+.form-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px; /* Aumentado para mayor separación */
+    width: 100%;
+}
+
+/* Estilo para las etiquetas */
+label {
+    margin-bottom: 8px; /* Aumentado para más separación */
+    font-weight: bold;
+    font-size: 1.1rem; /* Aumentar el tamaño de la fuente */
+    color: #333; /* Color más oscuro para mejorar la legibilidad */
+}
+
+/* Estilo para los inputs */
+input {
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 100%;
+    transition: border-color 0.3s; /* Agregar transición suave */
+}
+
+/* Cambiar el borde del input al enfocarlo */
+input:focus {
+    border-color: #0044ff; /* Color de borde en enfoque */
+    outline: none; /* Eliminar el contorno por defecto */
+}
+
+/* Estilo para el botón de registro */
+button[type="submit"] {
+    padding: 12px 20px; /* Aumentado para mayor tamaño */
+    background-color: #0044ff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1rem;
+    margin-top: 1rem;
+    transition: background-color 0.3s; /* Agregar transición suave */
+}
+
+button[type="submit"]:hover {
+    background-color: #0033cc; /* Cambio de color en hover */
+}
+
+/* Estilo para el botón de listar */
+#btnListar {
+    padding: 12px 20px; /* Aumentado para mayor tamaño */
+    background-color: #0044ff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1rem;
+    margin-top: 1rem;
+    transition: background-color 0.3s; /* Agregar transición suave */
+}
+
+#btnListar:hover {
+    background-color: #0033cc; /* Cambio de color en hover */
+}
+
+@media (max-width: 768px) {
+    #btnListar {
+        width: 50%; 
+        padding: 12px 0;
+        font-size: 1.2rem;
+    }
+}
+
+/* Estilo responsive para pantallas pequeñas */
+@media (max-width: 768px) {
+    form {
+        max-width: 100%;
+    }
+
+    header nav ul {
+        flex-direction: column;
+    }
+
+    footer {
+        position: relative;
+    }
+}
+
+/* Estilos para la tabla */
+table {
+    width: 100%; 
+    border-collapse: collapse; 
+    margin-top: 20px; 
+    font-family: Arial, sans-serif; 
+}
+
+/* Estilos para las celdas */
+table th, table td {
+    border: 1px solid #ddd; 
+    padding: 12px; 
+    text-align: left; 
+}
+
+/* Estilo para el encabezado de la tabla */
+table th {
+    background-color: #0044ff; 
+    color: white; 
+    font-weight: bold; 
+    text-transform: uppercase; 
+}
+
+/* Alterna colores para las filas */
+table tr:nth-child(even) {
+    background-color: #f9f9f9; 
+}
+
+/* Color de fondo para la fila al pasar el ratón */
+table tr:hover {
+    background-color: #f1f1f1; 
+}
+
+/* Responsive: tabla con scroll en pantallas pequeñas */
+@media (max-width: 768px) {
+    table {
+        display: block;
+        overflow-x: auto; 
+        white-space: nowrap; 
+    }
+}
+
+.logo{
+
+display: none;
+}

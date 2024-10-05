@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro de Usuarios</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">Inicio</div>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="tabla.html">Tabla de Usuarios</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Formulario de Registro de Usuarios</h1>
+        <form id="formRegistro">
+            <label for="cedula">Cédula:</label>
+            <input type="number" id="cedula" required>
+
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" required>
+
+            <label for="apellido">Apellido:</label>
+            <input type="text" id="apellido" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" required>
+
+            <label for="telefono">Teléfono:</label>
+            <input type="text" id="telefono" required>
+
+            <label for="direccion">Dirección:</label>
+            <input type="text" id="direccion" required>
+
+            <label for="fechaNacimiento">Fecha de Nacimiento:</label>
+            <input type="date" id="fechaNacimiento" required>
+
+            <label for="ciudad">Ciudad:</label>
+            <input type="text" id="ciudad" required>
+
+            <button type="submit">Registrar Usuario</button>
+        </form>
+
+        <button id="btnListar">Listar Usuarios</button>
+        <table id="tablaUsuarios">
+            <thead>
+                <tr>
+                    <th>Cédula</th>
+                    <th>Nombre</th>
+                    <th>Apellido</th>
+                    <th>Email</th>
+                    <th>Teléfono</th>
+                    <th>Dirección</th>
+                    <th>Fecha de Nacimiento</th>
+                    <th>Ciudad</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Usuarios serán listados aquí -->
+            </tbody>
+        </table>
+    </main>
+
+    <footer>
+        <p>Desarrollado por José Camilo Santos & Hector David Garcia</p>
+    </footer>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
